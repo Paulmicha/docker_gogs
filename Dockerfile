@@ -29,7 +29,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
     apt-get install wget unzip -y && \
     cd /tmp && \
     wget https://github.com/gogits/gogs/releases/download/v0.4.2/linux_amd64.zip && \
-    unzip linux_amd64.zip . && \
+    unzip linux_amd64.zip && \
     rm -f linux_amd64.zip && \
     mv /tmp/gogs /gogs-0.4.2
 
