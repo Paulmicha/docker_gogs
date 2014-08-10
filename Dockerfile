@@ -33,9 +33,9 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
     rm -f linux_amd64.zip && \
     mv /tmp/gogs /gogs-0.4.2
 
-#       Runit entry
-RUN mkdir /etc/service/gogs-0.4.2
-ADD gogs.sh /etc/service/gogs-0.4.2/run
+#       Runit entry (make sure gogs.sh is chmod +x)
+RUN mkdir -p /etc/my_init.d
+ADD gogs.sh /etc/my_init.d/gogs.sh
 
 #       Private port
 EXPOSE 3000
