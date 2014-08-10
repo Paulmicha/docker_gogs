@@ -26,7 +26,7 @@ MAINTAINER Paul Michalet <paul.michalet@gmail.com>
 #       Install Gogs v0.4.2
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list && \
     apt-get update && \
-    apt-get install wget unzip -y && \
+    apt-get install wget unzip git -y && \
     cd /tmp && \
     wget https://github.com/gogits/gogs/releases/download/v0.4.2/linux_amd64.zip && \
     unzip linux_amd64.zip && \
